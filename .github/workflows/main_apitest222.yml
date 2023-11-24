@@ -33,7 +33,7 @@ jobs:
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
       - name: Unzip data
-        run: unzip data1.zip -d extracted_folder1
+        run: unzip data1.zip -d data1
 
       - name: Zip artifact for deployment
         run: zip release.zip ./* -r
