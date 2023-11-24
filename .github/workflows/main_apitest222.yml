@@ -67,3 +67,14 @@ jobs:
           app-name: 'apitest222'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E5D7BFDE16F54B4687C10258B81C338B }}
+
+      - name: 'Run Flask API'
+        run: |
+          source venv/bin/activate
+          python api.py &
+          sleep 10  # Adjust the sleep duration based on your application's startup time
+
+      - name: 'Run Streamlit app'
+        run: |
+          source venv/bin/activate
+          streamlit run app.py
