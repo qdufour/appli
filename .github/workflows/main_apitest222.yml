@@ -28,7 +28,7 @@ jobs:
           source venv/bin/activate
       
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: python -m pip install -r requirements.txt
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
@@ -73,10 +73,9 @@ jobs:
       - name: 'Run Flask API'
         run: |
           source venv/bin/activate
-          python api.py &
-          sleep 10  # Adjust the sleep duration based on your application's startup time
+          python api.py   # Adjust the sleep duration based on your application's startup time
 
       - name: 'Run Streamlit app'
         run: |
           source venv/bin/activate
-          streamlit run app.py
+          python -m streamlit run app.py
