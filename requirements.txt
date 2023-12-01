@@ -4,6 +4,7 @@ pandas
 numpy
 shap==0.43.0
 streamlit==1.28.0
+scikit-learn==1.2.2
 matplotlib
 matplotlib-inline
 plotly
