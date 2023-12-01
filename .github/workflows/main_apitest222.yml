@@ -59,4 +59,4 @@ jobs:
       sleep 10          # Ajoutez un délai pour permettre au serveur de démarrer
 
   - name: 'Run Streamlit app'
-    run: streamlit run app.py
+    run: python -m streamlit run app.py
