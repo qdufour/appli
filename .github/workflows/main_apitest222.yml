@@ -55,8 +55,8 @@ jobs:
 
 
 
-"""
-name: Build and deploy Python app to Azure Web App - apitest222
+
+"""name: Build and deploy Python app to Azure Web App - apitest222
 on:
   push:
     branches:
