@@ -27,8 +27,8 @@ jobs:
           python -m venv venv
           source venv/bin/activate
       
-      - name: Install dependencies
-        run: python -m pip install -r requirements.txt
+      #- name: Install dependencies
+      #  run: python -m pip install -r requirements.txt
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
@@ -69,6 +69,9 @@ jobs:
           app-name: 'apitest222'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E5D7BFDE16F54B4687C10258B81C338B }}
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
 
       - name: 'Run Flask API'
         run: |
