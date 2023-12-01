@@ -1,3 +1,4 @@
+
 # Python on Linux Web App
 # Build a Python project (using Django/Flask/Bottle frameworks) and deploy it to Azure as a Linux web app.
 name: Deploy Python package to Azure Web App as a Linux web app.
@@ -14,7 +15,7 @@ env:
   STARTUP_COMMAND: ''           # set this to the startup command required to start the gunicorn server. default it is empty
 
 
-name: test
+#name: test
 jobs:
  build-and-deploy:
   runs-on: ubuntu-latest
