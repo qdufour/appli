@@ -58,4 +58,4 @@ jobs:
       pip install streamlit
       python api.py &   # Exécutez en arrière-plan en ajoutant "&"
       sleep 10          # Ajoutez un délai pour permettre au serveur de démarrer
-      python -m streamlit run app.py
+      python -m streamlit run app.py &
