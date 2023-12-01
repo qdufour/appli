@@ -55,7 +55,8 @@ jobs:
   - name: 'Run Flask API'
     run: |
       source antenv/bin/activate
-      python api.py   # Adjust the sleep duration based on your application's startup time
+      python api.py &   # Exécutez en arrière-plan en ajoutant "&"
+      sleep 10          # Ajoutez un délai pour permettre au serveur de démarrer
 
   - name: 'Run Streamlit app'
     run: streamlit run app.py
