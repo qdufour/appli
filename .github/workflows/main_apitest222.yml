@@ -27,6 +27,9 @@ jobs:
           python -m venv venv
           source venv/bin/activate
       
+      - name: Unzip data
+        run: unzip data1.zip -d data1
+
       - name: Install dependencies
         run: pip install -r requirements.txt
         
