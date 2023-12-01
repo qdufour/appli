@@ -53,7 +53,9 @@ jobs:
     run: unzip data1.zip -d data1
 
   - name: 'Run Flask API'
-    run: python api.py   # Adjust the sleep duration based on your application's startup time
+    run: |
+      source antenv/bin/activate
+      python api.py   # Adjust the sleep duration based on your application's startup time
 
   - name: 'Run Streamlit app'
     run: streamlit run app.py
