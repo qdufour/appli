@@ -61,5 +61,5 @@ jobs:
   - name: 'Run Streamlit app'
     run: |
     source antenv/bin/activate
-    pip install streamlit
+    # pip install streamlit
     python -m streamlit run app.py
