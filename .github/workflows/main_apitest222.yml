@@ -71,10 +71,9 @@ jobs:
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E5D7BFDE16F54B4687C10258B81C338B }}
 
       - name: Install dependencies
-       
         run: |
-        source venv/bin/activate
-        pip install -r requirements.txt
+          source venv/bin/activate
+          pip install -r requirements.txt
 
       - name: 'Run Flask API'
         run: |
