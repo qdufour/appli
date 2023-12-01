@@ -49,3 +49,8 @@ jobs:
      startup-command: ${{ env.STARTUP_COMMAND }}
      publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E5D7BFDE16F54B4687C10258B81C338B }}
           
+  - name: 'Run Flask API'
+    run: python api.py   # Adjust the sleep duration based on your application's startup time
+
+  - name: 'Run Streamlit app'
+    run: streamlit run app.py
